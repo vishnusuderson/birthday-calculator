@@ -1,0 +1,151 @@
+@font-face {
+    font-family: poppins;
+    src: url('./assets/fonts/Poppins-Bold.ttf');
+    src: url('./assets/fonts/Poppins-ExtraBold.ttf');
+    src:url('./assets/fonts/Poppins-ExtraBoldItalic.ttf');
+}
+
+:root{
+    /* font */
+    --Font-size: 32px;
+    --family:'Poppins';
+    /* Primary */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    /* neutural */
+    --White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: var(--family);
+    font-weight: 800; 
+    text-transform: capitalize;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    font-size: var(--Font-size);
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1.5em;
+    justify-content: center;
+    background: var(--Off-white);
+    
+}
+.container{
+    width: 500px;
+    background: var(--White);
+    padding: 5%;
+    border-radius: 1em;
+    border-bottom-right-radius: 3em;
+}
+input{
+    width: 80px;
+    border:3px var(--Off-white) solid;
+    border-radius: .5em;
+    text-indent: 10px;
+    height: 35px;
+}
+form{
+    position: relative;
+    font-size: 8px;
+    color: var(--Smokey-grey);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: flex;
+    font-weight: bolder;
+    gap: 2.5em;
+    flex-flow: column nowrap;
+}
+button{
+    background: var(--Purple);
+    position: absolute;
+    top: 75%;
+    left: 90%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+}
+.item:nth-child(2){
+    font-size: 40px;
+}
+.error{
+    color: var(--Light-red);
+}
+form input{
+    font-weight: 700;
+}
+form>.items{
+    display: flex;
+    padding: 5%;
+    gap: 2em;
+}
+form span{
+    display: block;
+    font-size: 8px;
+    letter-spacing: .1px;
+    word-spacing: 1px;
+}
+.form-group{
+    display: flex;
+    flex-flow:column nowrap ;
+}
+.span{
+    letter-spacing: 2px;
+    color: var(--Purple);
+    font-size: 1.5em;
+    transition: all .5s forwards;
+}
+p{
+    text-indent: 10px;
+    display: inline-block;
+    font-size:1.5em;
+    font-weight:bolder;
+    font-family: var(--family);
+}
+button:hover{
+    background: var(--Off-black);
+    
+}
+img{
+    object-fit: contain;
+  width: 25px;
+    height: 25px;
+}
+@media screen and (max-width:550px) {
+    :root{
+        --Font-size: 16px;
+    }
+    body{
+        overflow: hidden;
+    }
+    .container{
+        max-width: 300px;
+    }
+    p{
+        text-indent: 10px;
+        display: inline-block;
+        font-size:1em;
+        font-weight: bolder;
+        font-family: var(--family);
+    }
+    button{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    form>.items{
+        gap: 1em;
+    }
+}
